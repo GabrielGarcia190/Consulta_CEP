@@ -43,7 +43,7 @@ function App() {
             if (data.erro) {
               setIsOpen(false);
               setModalError(true);
-              console.log("PASEI");
+              console.log(data.erro);
             } else {
               setresCEP(data);
               setIsOpen(true);
@@ -60,6 +60,8 @@ function App() {
     }
   }
 
+
+  
   function handleCpfChange(event: React.ChangeEvent<HTMLInputElement>) {
     const formattedCEP = event.target.value
       .replace(/\D/g, "")
